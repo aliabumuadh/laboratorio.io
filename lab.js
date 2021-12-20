@@ -4,6 +4,7 @@ window.onload = function () {
     document.getElementById('num2').oninput = mayorQue;
     document.getElementById('vowels').oninput = buscarVocales;
     document.getElementById('counting_vowels').oninput = cuentaVocales;
+    $recurso.innerHTML="https://mindicador.cl/api/dolar";
 }
 
 const vocales =["a", "e", "i", "o", "u"];
@@ -66,7 +67,7 @@ function mayorQue() {
     $codigo=document.getElementById("codigo"),
     $fragment=document.createDocumentFragment();
 
-    $recurso.innerHTML="";
+    
     $cabeceras.innerHTML="";
     $estados.innerHTML="";
     $contenidos.innerHTML="";
