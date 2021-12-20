@@ -7,45 +7,86 @@
     <meta name="description" content="Página de enseñanza html 5" />
     <meta name="keywords" content="html5, css3, Javascript, diseño web" />
     <title>JavaScript</title>
+    <link rel="stylesheet" href="estilo.css">
     <script src="lab.js"></script>
+
 </head>
 
 <body>
+    <header class="title">
+        <h1>Laboratorio</h1>
+    </header>
 
     <body>
-        <form action="#">
-            <h2>Ejercicio 1</h2>
-            <p>Detectar si la cadena de entrada en un palíndromo.</p>
-            Ingrese una frase: <input type="text" id="palindrome" size="80" placeholder="Ingrese su frase aquí" />
-            <!-- <input type="button" id="send1" value="Verificar"/> -->
-        </form>
-        <div id="res1"></div>
-        <h2>Ejercicio 2</h2>
-        <p>Escribe un programa que pida dos números y escriba en la pantalla cual es el
-            mayor.</p>
-        Ingrese 2 números:
-        <input type="number" class="js-number" id="num1" size="20" placeholder="n1" />
-        <input type="number" class="js-number" id="num2" size="20" placeholder="n2" />
-        <!-- <input type="button" id="send2" value="Comparar"/> -->
-        </form>
-        <div id="res2"></div>
-        <h2>Ejercicio 3</h2>
-        <p>Escribe un programa que pida una frase y escriba las vocales que
-            aparecen.</p>
-        Ingrese una frase:
-        <input type="text" id="vowels" size="80" placeholder="Ingrese su frase aquí" />
-        <!-- <input type="button" id="send3" value="Vocales"/> -->
-        </form>
-        <div id="res3"></div>
-        <h2>Ejercicio 4</h2>
-        <p>Escribe un programa que pida una frase y escriba cuántas veces aparecen
-            cada una de las vocales.</p>
-        Ingrese una frase:
-        <input type="text" id="counting_vowels" size="80" placeholder="Ingrese su frase aquí" />
-        <!-- <input type="button" id="send4" value="Vocales"/> -->
-        </form>
-        <div id="res4"></div>
+        <div class="container">
+            <header class="header">
+                <h1>Ejercicios JavaScript</h1>
+            </header>
+
+            <form action="#">
+                <article>
+                    <h2>Ejercicio 1</h2>
+                    <p>Detectar si la cadena de entrada en un palíndromo.</p>
+                    Ingrese una frase: <input type="text" id="palindrome" size="80" placeholder="Ingrese su frase aquí" />
+                    <div id="res1"></div>
+                </article>
+
+                <article>
+                    <h2>Ejercicio 2</h2>
+                    <p>Escribe un programa que pida dos números y escriba en la pantalla cual es el
+                        mayor.</p>
+                    Ingrese 2 números:
+                    <input type="number" class="js-number" id="num1" size="20" placeholder="n1" />
+                    <input type="number" class="js-number" id="num2" size="20" placeholder="n2" />
+                    <div id="res2"></div>
+                </article>
+                <article>
+                    <h2>Ejercicio 3</h2>
+                    <p>Escribe un programa que pida una frase y escriba las vocales que
+                        aparecen.</p>
+                    Ingrese una frase:
+                    <input type="text" id="vowels" size="80" placeholder="Ingrese su frase aquí" />
+                    <div id="res3"></div>
+                </article>
+                <article>
+                    <h2>Ejercicio 4</h2>
+                    <p>Escribe un programa que pida una frase y escriba cuántas veces aparecen
+                        cada una de las vocales.</p>
+                    Ingrese una frase:
+                    <input type="text" id="counting_vowels" size="80" placeholder="Ingrese su frase aquí" />
+                    <div id="res4"></div>
+                </article>
+            </form> 
+
+            <header class="header">
+                <h1>Ejercicios AJAX</h1>
+            </header>
+
+            <form action="#">
+                URL:
+                <input type="text" id="recurso" size="70" />
+                <input type="button" id="enviar" value="Mostrar contenidos" onclick="btnEnviar()" />
+              </form>
+            
+              <div id="principal">
+                <h2>Contenidos del archivo:</h2>
+                <div id="contenidos"></div>
+            
+                <h2>Cabeceras HTTP de la respuesta del servidor:</h2>
+                <div id="cabeceras"></div>
+              </div>
+            
+              <div id="secundario">
+                <h2>Estados de la petición:</h2>
+                <div id="estados"></div>
+            
+                <h2>Código de estado:</h2>
+                <div id="codigo"></div>
+              </div>
+            
+             
+        </div>
     </body>
-    
+
 
 </html>
