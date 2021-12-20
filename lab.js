@@ -67,23 +67,17 @@ function mayorQue() {
     $codigo=document.getElementById("codigo"),
     $fragment=document.createDocumentFragment();
 
-    
     $cabeceras.innerHTML="";
     $estados.innerHTML="";
     $contenidos.innerHTML="";
     $codigo.innerHTML="";
 
-
     const valorEstados= ['UNSET', 'OPENED', 'HEADERS_RECEIVED', 'LOADING', 'DONE'];
-
 
     xhr.addEventListener("readystatechange", e=>{
         let finalTime = new Date();
         let miliseconds = finalTime - initialTime;
-
-        //$estados.innerHTML=`${xhr.readyState} ${valorEstados[parseInt(xhr.readyState)-1]}`;
-        $estados.innerHTML += xhr.readyState +" - [" + miliseconds + " ms.] " +
-valorEstados[xhr.readyState] + "<br/>";
+        $estados.innerHTML += xhr.readyState +" - [" + miliseconds + " ms.] " + valorEstados[xhr.readyState] + "<br/>";
         if (xhr.readyState===4 && xhr.status===200){
             $cabeceras.innerHTML=` ${xhr.getAllResponseHeaders()}`;
             $contenidos.innerHTML=xhr.responseText;
@@ -91,9 +85,6 @@ valorEstados[xhr.readyState] + "<br/>";
         $codigo.innerHTML=xhr.status + " " + xhr.statusText + "<br/>";
     });
     
-        
-   
-
     xhr.open("GET",$recurso.value);
     //xhr.open("GET", "https://jsonplaceholder.typicode.com/users");
     xhr.send();
